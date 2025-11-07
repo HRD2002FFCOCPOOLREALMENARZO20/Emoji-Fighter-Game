@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #ff4f81;
+    margin-bottom: 20px;
+    transition: transform 0.4s;
+}
+
+.box img:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+h1 {
+    color: #3b3b98;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 0px #fff;
+}
+
+.btn {
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff4f81, #ff884b);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 79, 129, 0.3);
+}
+
+
+#winner {
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff1f81, #ff874b);
+    color: white;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.6s ease;
+    box-shadow: 0 4px 10px rgba(255, 79, 129, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #ff884b, #ff4f81);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 79, 129, 0.5);
+}
+
+#fighters {
+    font-size: 70px;
+    margin-top: 30px;
+    color: #222;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    animation: bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+}
