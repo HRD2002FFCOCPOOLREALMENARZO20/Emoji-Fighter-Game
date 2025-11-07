@@ -37,13 +37,18 @@ fightButton.addEventListener("click", function () {
     let fighter2 = fighter_array[j];
 
     // get power levels from object
-    let power1 = powerLevelOfFighters.fighter1
-    let power2 = powerLevelOfFighters.fighter2
+    let power1 = powerLevelOfFighters[fighter1];
+    let power2 = powerLevelOfFighters[fighter2];
 
     // Display fighters on screen 
     fightersEl.innerText = fighter_array[i] + "  vs  " + fighter_array[j];
          
-    let result = power1 > power2 ? "Winner is " + fighter1 + " " : "winner is " + fighter2
+     let result =
+        power1 > power2 ? `Winner is ${fighter1} 🏆`: (power2 === power1
+                                                            ? "Oops! It's a tie — they have the same power level 🤝"
+                                                            : `Winner is ${fighter2} 🏅`
+                                                        );
+
     // Show  winner emoji
     document.getElementById("winner").innerText = result
 
